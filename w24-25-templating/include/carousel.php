@@ -25,7 +25,7 @@
     </div>
 
     <div id='clicker'>
-      <h1>EXPAND</h1>
+      <h1 id='clickertext'>Uitbreiden</h1>
     </div>
 
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
