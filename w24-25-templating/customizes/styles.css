@@ -4,6 +4,7 @@ body{
 	grid-gap: 0;
 	overflow-x: hidden;
 	background-color: rgb(50,50,50);
+	height: 100vh;
 }
 .navbar{
 	grid-column: 1/7;
@@ -153,12 +154,14 @@ body{
 
 
 #footer{
-	grid-row: 100;
+	grid-row: 99;
 	grid-column: 1/7;
 	background-color: black;
 	text-align: center;
 	color: white;
 	font-size: 20px;
+	height: 100px;
+	transition: .5s ease-in-out;
 }
 #footer span{
 	height: 40px;
@@ -182,7 +185,7 @@ form{
 	text-align: center;
 	color: white;
 }
-#name,#email,textarea{
+#name,#email,#tel,textarea{
 	width: 50%;
 	border-radius: 10px;
 	border: 1px solid black;
@@ -191,14 +194,17 @@ form{
 	color: white;
 	transition: .2s;
 }
+#tel{
+	height: 100px;
+}
 textarea{
 	resize: none;
 	background-color: rgb(50,50,50);	
 }
-#name:active,#email:active,textarea:active,#send:active,#reset:active{
+#name:active,#email:active,textarea:active,#send:active,#reset:active,#tel:active{
 	box-shadow: 0 0 100px 20px rgba(255, 236, 94, .9), inset 0 0 100px 5px black;
 }
-#send,#reset{
+#send,#reset,#tel{
 	border-radius: 5px;
 	background-color: rgb(50,50,50);
 	border: 1px solid black;
@@ -244,13 +250,8 @@ textarea{
   	transition: visibility 0s, opacity 0.5s ease-in-out;
 }
 #divider{
-	margin-bottom: -10vw;
+	margin-bottom: -100vh;
 	transition: .5s;
-}
-#footer{
-	margin-top: -10vw;
-	height: 100px;
-	transition: .5s ease-in-out;
 }
 #buttondiv{
   	visibility: hidden;

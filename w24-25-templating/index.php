@@ -5,7 +5,7 @@
 	<?php include 'include/head.php'; ?>
   	<link rel="stylesheet" type="text/css" href="customizes/styles.css">
 </head>
-<body>
+<body id='body'>
 
 	<?php
 		include 'include/header.php';

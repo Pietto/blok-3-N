@@ -22,28 +22,21 @@
 	    }
     ?>
 
-    <?php
-		// the message
-		$msg = "First line of text\nSecond line of text";
-
-		// use wordwrap() if lines are longer than 70 characters
-		$msg = wordwrap($msg,70);
-
-		// send email
-		mail("pieterjan.v.dijk@Gmail.com","My subject",$msg);
-	?>
-
 	<form method="POST">
 		<p>Naam:</p> <input type="text" name="name" id='name' value='<?php echo $name; ?>'>
 		<p>Email:</p> <input type="text" name="email" id='email' value='<?php echo $email; ?>'>
-		<p>Email:</p> <input type="text" name="email" id='email' value='<?php echo $email; ?>'>
+		<p>Telefoon-nummer:</p> <input type="tel" id="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 		<p>Bericht:</p> <textarea name="message" rows="6" cols="25"><?php echo $message; ?></textarea><br />
 		<input type="submit" value="Send" id='send'><input type="reset" value="Clear" id='reset'>
 	</form>
 
+	<?php
+		include 'include/footer.php';
+	?>
+
 	<script src="customizes/js.js"></script>
 	<script>
 		var title = document.title;
-		document.getElementById(title).setAttribute("class", "active");
+		document.getElementById(title).setAttribute("class","active");
 	</script>
 </body>
