@@ -52,7 +52,7 @@ body{
   	display: table;
   	box-shadow: 0 0 100px 50px black, inset 0 0 100px 5px black;
 
-  	transition: .5s;
+  	transition: .2s ease-in-out;
 }
 #clicker h1,#clicker2 h1{
 	display: table-cell;
@@ -195,7 +195,7 @@ form{
 	transition: .2s;
 }
 #tel{
-	height: 100px;
+	width: 100vw;
 }
 textarea{
 	resize: none;
@@ -216,6 +216,13 @@ textarea{
 	transition: .2s;
 }
 
+
+#WSheader,#WStext{
+	grid-row: 2;
+	grid-column: 1/7;
+	widows: 100%;
+	background-color: black;
+}
 
 
 

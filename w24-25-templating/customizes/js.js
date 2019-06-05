@@ -77,10 +77,10 @@ if(title=='Home'){
 
 		clicker.id = "clicker";
 	}
-	var newpage = document.getElementById('expandbtn');
-	newpage.onclick=URL
+var newpage = document.getElementById('expandbtn');
+newpage.onclick=URL
 }else{}
 
 function URL() {
-    location.href = 'http://your.url.here';
+    location.href = 'werkenskills.php';
 }
