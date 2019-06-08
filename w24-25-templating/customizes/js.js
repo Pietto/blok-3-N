@@ -26,11 +26,6 @@ function inpandpf(){
 }
 var title = document.title;
 if(title=='Home'){
-	document.getElementById('spooter').onclick=linked
-	function linked(){
-		window.open('https://www.linkedin.com');
-	}
-
 	var clicker = document.getElementById('clicker');
 	var clickertext = document.getElementById('clickertext');
 	clicker.onclick=expand
@@ -84,3 +79,7 @@ newpage.onclick=URL
 function URL() {
     location.href = 'werkenskills.php';
 }
+	document.getElementById('spooter').onclick=linked
+	function linked(){
+		window.open('https://www.linkedin.com/in/pieterjan-van-dijk-82b320182/');
+	}

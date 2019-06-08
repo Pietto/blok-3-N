@@ -5,8 +5,8 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	    	<li id='Home'><a href="index.php">Home</a></li>
-	    	<li id='Page 1'><a href="#">Page 1</a></li>
-	    	<li id='Page 2'><a href="#">Page 2</a></li>
+	    	<li id='Over mij'><a href="overmij.php">Over mij</a></li>
+	    	<li id='Photo gallery'><a href="photo-gallery.php">photo gallery</a></li>
 	    	<li id='Contact'><a href="contact.php">Contact</a></li>
 	    </ul>
 	    <img src='images/author.jpg' alt='author' id='profilepic'>

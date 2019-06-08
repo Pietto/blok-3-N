@@ -15,21 +15,26 @@
 	        $email = strip_tags($_POST['email']);
 	        $message = strip_tags($_POST['message']);
 	        $phone = strip_tags($_POST['phone']);
-	        echo '<p style="color:white;">',
-	        'Naam: ',$name,
-	        '<br>Email: ',$email,
-	        '<br>Telefoon-nummer: ',$phone,
-	        '<br>Bericht: ',$message,
-	    	'</p>';
+		    if(empty($name)||empty($email)||empty($message)){
+			   echo "<script type='text/javascript'>alert('please fill al requiered fields');</script>";
+			}else{
+		        echo '<p id="result" style="color: white;">',
+		        'Naam: ',$name,
+		        '<br>Email: ',$email,
+		        '<br>Telefoon-nummer: ',$phone,
+		        '<br>Bericht: ',$message,
+		    	'</p>';
+		    	echo "<style>#result,form{position: relative;top: 100px;}</style>";
+		    }
 	    }
     ?>
 
 	<form method="POST">
-		<p>Naam:</p> <input type="text" name="name" id='name' value='<?php echo $name; ?>'>
-		<p>Email:</p> <input type="text" name="email" id='email' value='<?php echo $email; ?>'>
-		<p>Telefoon-nummer:</p> <input type="tel" id="tel" name="phone" value='<?php echo $phone; ?>'>
-		<p>Bericht:</p> <textarea name="message" rows="6" cols="25"><?php echo $message; ?></textarea><br />
-		<input type="submit" value="Send" id='send'><input type="reset" value="Clear" id='reset'>
+		<p id='namep'>Naam:</p> <input type="text" name="name" id='name' value='<?php echo $name; ?>' required>
+		<p id='emailp'>Email:</p> <input type="text" name="email" id='email' value='<?php echo $email; ?>'required>
+		<p id='telp'>Telefoon-nummer:</p> <input type="tel" id="tel" name="phone" value='<?php echo $phone; ?>' required>
+		<p id='messagep'>Bericht:</p> <textarea required name="message" rows="6" cols="25"><?php echo $message; ?></textarea>
+		<br/><input type="submit" value="Send" id='send'><input type="reset" value="Clear" id='reset'>
 	</form>
 
 	<?php
@@ -42,3 +47,4 @@
 		document.getElementById(title).setAttribute("class","active");
 	</script>
 </body>
+</html>
