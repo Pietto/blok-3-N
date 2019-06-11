@@ -189,17 +189,14 @@ form{
 	color: white;
 	transition: .2s;
 }
-#tel{
-	width: 100vw;
-}
 textarea{
 	resize: none;
 	background-color: rgb(50,50,50);	
-}
+}	
 #name:active,#email:active,textarea:active,#send:active,#reset:active,#tel:active{
 	box-shadow: 0 0 100px 20px rgba(255, 236, 94, .9), inset 0 0 100px 5px black;
 }
-#send,#reset,#tel{
+#send,#reset{
 	border-radius: 5px;
 	background-color: rgb(50,50,50);
 	border: 1px solid black;
