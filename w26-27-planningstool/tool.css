@@ -110,6 +110,7 @@ ody{
 }
 input{
 	width: 25vw !important;
+	text-align: center;
 }
 .content a{
 	color: rgba(0,0,0,1) !important;
@@ -148,3 +149,11 @@ input{
 #ffce00	--gold leaf
 #1d2731	--ivory black
 */
+.testdivs{
+	background-color: white;
+	transition: .35s;
+}
+.testdivs:hover{
+	background-color: pink;
+	cursor: pointer;
+}

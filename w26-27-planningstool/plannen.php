@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="tool.css">
 </head>
 <body>
-	<script src="plannen.js"></script>
-
 	<div id='top'>
 		<div id='header'>
 			<h1>Planningstool</h1>
@@ -35,30 +33,25 @@
 	<div id='content'>
 		<form class="form-horizontal">
 		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="usr"><p>Welk spel wilt u gaan spelen?</p></label>
+		    	<label class="control-label col-sm-2" for="game"><p>Welk spel wilt u gaan spelen?</p></label>
 		    	<div class="col-sm-10">
-		        	<input type="button" id='button usr' class="form-control input">
+		        	<input type="button" id='urlbutton game' onclick='loadURL()' class="form-control input">
 		     	</div>
 		    </div>
 		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="usr"><p>tijdvak:</p></label>
-		    	<input type="button" id='button expandbtn' class="form-control input" data-toggle="collapse" data-target="#demo" value="selecteer een tijdvak">
-		    	<div id="demo" class="collapse">
-		    		<button>tijdvak0</button>
-		    		<button>tijdvak0</button>
-		    		<button>tijdvak0</button>
-		    		<button>tijdvak0</button>
-		    		<button>tijdvak0</button>
-			  	</div>
-		    </div>
-		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="usr"><p>leraar:</p></label>
+		    	<label class="control-label col-sm-2" for="time"><p>tijdvak:</p></label>
 		    	<div class="col-sm-10">
-		        	<input type="text" class="form-control input" id="usr"  placeholder="Wie gaat het spel uitleggen?">
+		        	<input type="time" class="form-control input" id="time" min="9:00" max="16:00" required>
 		     	</div>
 		    </div>
 		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="usr"><p>spelers:</p></label>
+		    	<label class="control-label col-sm-2" for="teacher"><p>leraar:</p></label>
+		    	<div class="col-sm-10">
+		        	<input type="text" class="form-control input" id="teacher"  placeholder="Wie gaat het spel uitleggen?">
+		     	</div>
+		    </div>
+		    <div class="form-group">
+		    	<label class="control-label col-sm-2" for="user"><p>spelers:</p></label>
 		    	<div class="col-sm-10">
 		    		<div class='personsdiv'>
 			        	<input type="text" class="form-control input persons" id="user1" maxlength="20" placeholder="Speler 1">
@@ -77,7 +70,7 @@
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="usr"></label>
 		    	<div class="col-sm-10">
-		        	<input type="submit" id='button' class="form-control input" id="usr">
+		        	<input type="submit" id='noidyet' class="form-control input" id="usr">
 		     	</div>
 		    </div>
 		</form>
@@ -90,6 +83,8 @@
 
 	<?php
 		include 'database/connect.php';
+		include 'database/create.php';		
 	?>
+	<script src="plannen.js"></script>
 </body>
 </html>

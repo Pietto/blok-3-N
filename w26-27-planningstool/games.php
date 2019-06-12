@@ -24,8 +24,8 @@
 		    	</div>
 		    	<ul class="nav navbar-nav">
 		      		<li><a href="tool.php">Home</a></li>
-		      		<li><a href="plannen.php">Inplannen</a></li>
-		      		<li class="active"><a href="planning.php">Planning bekijken</a></li>
+		      		<li class="active"><a href="plannen.php">Inplannen</a></li>
+		      		<li><a href="planning.php">Planning bekijken</a></li>
 		    	</ul>
 		    	<button class="btn btn-danger navbar-btn"><a href='https://www.youtube.com/watch?v=fC0ZxCqw0pA' target="blank">Help</a></button>
 		  	</div>
@@ -33,6 +33,8 @@
 	</div>
 
 	<div id='content'>
+		<div id='t1' class='testdivs'><h1>1</h1></div>
+		<div id='t2' class='testdivs'><h1>2</h1></div>
 	</div>
 
 
@@ -43,5 +45,6 @@
 	<?php
 		include 'database/connect.php';
 	?>
+	<script src="plannen.js"></script>
 </body>
 </html>
