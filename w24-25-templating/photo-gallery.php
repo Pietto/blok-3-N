@@ -9,10 +9,7 @@
 
 	<?php
 		include 'include/header.php';
-	?>
-
-
-	<?php
+		include 'include/carousel2.php';
 		include 'include/footer.php';
 	?>
 	<script src="customizes/js.js"></script>
