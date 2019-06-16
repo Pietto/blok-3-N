@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="tool.css">
 </head>
 <body>
+
+	<?php
+		include 'database/connect.php';
+		include 'database/create.php';		
+	?>
+
+
 	<div id='top'>
 		<div id='header'>
 			<h1>Planningstool</h1>
@@ -31,40 +38,29 @@
 	</div>
 
 	<div id='content'>
-		<form class="form-horizontal">
+		<form class="form-horizontal" method="POST">
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="game"><p>Welk spel wilt u gaan spelen?</p></label>
 		    	<div class="col-sm-10">
-		        	<input type="button" id='urlbutton game' onclick='loadURL()' class="form-control input">
+		        	<input name='game' type="button" id='urlbutton game' onclick='loadURL()' class="form-control input">
 		     	</div>
 		    </div>
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="time"><p>tijdvak:</p></label>
 		    	<div class="col-sm-10">
-		        	<input type="time" class="form-control input" id="time" min="9:00" max="16:00" required>
+		        	<input name='time' type="time" class="form-control input" id="time" min="9:00" max="16:00" value='<?php echo $time; ?>' required>
 		     	</div>
 		    </div>
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="teacher"><p>leraar:</p></label>
 		    	<div class="col-sm-10">
-		        	<input type="text" class="form-control input" id="teacher"  placeholder="Wie gaat het spel uitleggen?">
+		        	<input name='teacher' type="text" class="form-control input" id="teacher"  placeholder="Wie gaat het spel uitleggen?" value='<?php echo $teacher; ?>' required>
 		     	</div>
 		    </div>
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="user"><p>spelers:</p></label>
 		    	<div class="col-sm-10">
-		    		<div class='personsdiv'>
-			        	<input type="text" class="form-control input persons" id="user1" maxlength="20" placeholder="Speler 1">
-			        	<input type="text" class="form-control input persons" id="user3" maxlength="20" placeholder="Speler 3">
-			        	<input type="text" class="form-control input persons" id="user5" maxlength="20" placeholder="Speler 5">
-			        	<input type="text" class="form-control input persons" id="user7" maxlength="20" placeholder="Speler 7">
-					</div>
-					<div class='personsdiv'>
-			        	<input type="text" class="form-control input persons" id="user2" maxlength="20" placeholder="Speler 2">
-			        	<input type="text" class="form-control input persons" id="user4" maxlength="20" placeholder="Speler 4">
-			        	<input type="text" class="form-control input persons" id="user6" maxlength="20" placeholder="Speler 6">
-			        	<input type="text" class="form-control input persons" id="user8" maxlength="20" placeholder="Speler 8">
-		        	</div>
+			        <input name='players' type="text" class="form-control input persons" id="user1" placeholder="Spelers" value='<?php echo $players; ?>' required>
 		     	</div>
 		    </div>
 		    <div class="form-group">
@@ -80,11 +76,6 @@
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>
 	</div>
-
-	<?php
-		include 'database/connect.php';
-		include 'database/create.php';		
-	?>
 	<script src="plannen.js"></script>
 </body>
 </html>

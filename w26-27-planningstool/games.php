@@ -33,8 +33,18 @@
 	</div>
 
 	<div id='content'>
-		<div id='t1' class='testdivs'><h1>1</h1></div>
-		<div id='t2' class='testdivs'><h1>2</h1></div>
+		<div class='gamediv'>
+			<h1>'gamename'</h1>
+			<span class='gameimg'></span>
+		</div>
+		<div class='gamediv'>
+			<h1>'gamename'</h1>
+			<span class='gameimg'></span>
+		</div>
+		<div class='gamediv'>
+			<h1>'gamename'</h1>
+			<span class='gameimg'></span>
+		</div>
 	</div>
 
 

@@ -33,15 +33,12 @@
 	</div>
 
 	<div id='content'>
+		
 	</div>
 
 
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>
 	</div>
-
-	<?php
-		include 'database/connect.php';
-	?>
 </body>
 </html>
