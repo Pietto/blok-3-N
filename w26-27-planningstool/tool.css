@@ -187,3 +187,13 @@ input:hover{
 		width: 80vw;
 	}
 }*/
+.btn-update{
+	float: left;
+}
+.btn-delete{
+	float: right;
+	background-color: red;
+}
+.btn-delete:hover{
+	background-color: rgba(200,0,0,1);
+}

@@ -53,10 +53,21 @@
 		    while ($data = $stmt->fetch())
 		        echo "<div class='card'>"
 		    	.'<h1 id="gamename">'.$data['game'].'</h1>'
-		    	.'<img alt="alt" src="../afbeeldingen/7_wonders.jpg">'
+		    	.'<p><b>Geplande begintijd: </b>'.$data['time'].'</p>'
+		    	.'<p><b>Lengte spel: </b>'.'0</p>'
+		    	.'<p><b>uitlegger: </b>'.$data['teacher'].'</p>'
+		    	.'<button class="btn btn-primary btn-update">update</button>'
+		    	.'<button class="btn btn-primary btn-delete">delete</button>'
 		    	."</div>";
 		?>
 	</div>
+
+
+	<!-- informatie:
+	De naam van het spel
+	Op welke tijd is deze gepland.
+	Hoe lang het duurt
+	Wie de uitleg geeft -->
 
 
 	<div id='footer'>
