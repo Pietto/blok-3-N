@@ -26,7 +26,6 @@
 		      		<li><a id='planner' href="plannen.php">Inplannen</a></li>
 		      		<li><a id='planning' href="planning.php">Planning bekijken</a></li>
 		    	</ul>
-		    	<button class="btn btn-danger navbar-btn"><a href='https://www.youtube.com/watch?v=fC0ZxCqw0pA' target="blank">Help</a></button>
 		  	</div>
 		</nav>
 	</div>

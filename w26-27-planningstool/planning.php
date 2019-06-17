@@ -27,7 +27,6 @@
 		      		<li><a href="plannen.php">Inplannen</a></li>
 		      		<li class="active"><a href="planning.php">Planning bekijken</a></li>
 		    	</ul>
-		    	<button class="btn btn-danger navbar-btn"><a href='https://www.youtube.com/watch?v=fC0ZxCqw0pA' target="blank">Help</a></button>
 		  	</div>
 		</nav>
 	</div>
@@ -46,7 +45,7 @@
 		    catch(PDOException $e){
 		        echo $sql . "<br>" . $e->getMessage();
 		    }
-		    $sql = "SELECT id, game, time, teacher, players FROM plannedgames";
+		    $sql = "SELECT id, game, time, teacher, players FROM plannedgames ORDER BY time";
 		    $stmt = $conn->prepare($sql);
 		    $stmt->execute();
 
@@ -56,7 +55,7 @@
 		    	.'<p><b>Geplande begintijd: </b>'.$data['time'].'</p>'
 		    	.'<p><b>Lengte spel: </b>'.'0</p>'
 		    	.'<p><b>uitlegger: </b>'.$data['teacher'].'</p>'
-		    	.'<button class="btn btn-primary btn-update">update</button>'
+		    	.'<a href="database/update.php?name='.$data["game"].'&time='.$data["time"].'&teacher='.$data["teacher"].'&players='.$data["players"]."&id=".$data["id"].'" class="btn btn-primary">'.'update'.'</a>'
 		    	.'<button class="btn btn-primary btn-delete">delete</button>'
 		    	."</div>";
 		?>

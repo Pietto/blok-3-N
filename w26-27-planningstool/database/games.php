@@ -6,11 +6,9 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="tool.css">
+    <link rel="stylesheet" href="../tool.css">
 </head>
 <body>
-	<script src="plannen.js"></script>
-
 	<div id='top'>
 		<div id='header'>
 			<h1>Planningstool</h1>
@@ -23,9 +21,10 @@
 		      		<a class="navbar-brand" href="#">Plannings tool</a>
 		    	</div>
 		    	<ul class="nav navbar-nav">
-		      		<li><a href="tool.php">Home</a></li>
-		      		<li class="active"><a href="plannen.php">Inplannen</a></li>
-		      		<li><a href="planning.php">Planning bekijken</a></li>
+		      		<li><a href="../tool.php">Home</a></li>
+		      		<li class="active"><a href="../plannen.php">Inplannen</a></li>
+		      		<li><a href="../planning.php">Planning bekijken</a></li>
+		      		<li class='active'><a href="planning.php">Update</a></li>
 		    	</ul>
 		  	</div>
 		</nav>
@@ -49,9 +48,15 @@
 		    $stmt = $conn->prepare($sql);
 		    $stmt->execute();
 
+		   	$name = $_GET['name'];
+		   	$time = $_GET['time'];
+		   	$teacher = $_GET['teacher'];
+		   	$players = $_GET['players'];
+		   	$id = $_GET['id'];
+
 		    while ($data = $stmt->fetch())
 		        echo '<div class="card">'
-		            .'<img class="card-img-top" src="../afbeeldingen/'.$data["image"].'"  alt="logo">'
+		            .'<img class="card-img-top" src="../../afbeeldingen/'.$data["image"].'"  alt="logo">'
 		            .'<div class="card-body">'
 		            .'<h1 class="card-title">'.$data['name'].'</h5>'
 		            .'<br>'
@@ -60,7 +65,7 @@
 		            .$data["description"]
 		            .'<a target="_blank" href="'.$data["url"].'">Meer informatie</a></br></br>'
 		            .$data["youtube"].'<br><br>'
-		            .'<a href="plannen.php?name='.$data["name"].'" class="btn btn-primary">'.'game toevoegen'.'</a>'
+		            .'<a href="update.php?name='.$data["name"]."&time=".$time."&teacher=".$teacher."&players=".$players."&id=".$id.'" class="btn btn-primary">'.'game veranderen'.'</a>'
 		            .'</div>'
 		            .'</div>';
 		?>
@@ -70,11 +75,5 @@
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>
 	</div>
-
-	<?php
-		include 'database/connect.php';
-	?>
-	<script src="plannen.js"></script>
-
 </body>
 </html>
