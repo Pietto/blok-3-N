@@ -37,10 +37,10 @@
         $time = strip_tags($_POST['time']);
         $players = strip_tags($_POST['players']);
         $teacher = strip_tags($_POST['teacher']);
-	    if(empty($players)||empty($time)||empty($teacher)){
+        $name = $_GET['name'];
+	    if(empty($players)||empty($time)||empty($teacher)||empty($name)){
 		   echo "<script type='text/javascript'>alert('please fill al requiered fields');</script>";
 		}else{
-			#<!-- inserting data right here --><!-- alpha version -->
 		    $servername = "localhost";
 		    $username = "root";
 		    $password = "mysql";
@@ -50,11 +50,12 @@
 		        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		        // set the PDO error mode to exception
 		        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		        $sql = "INSERT INTO realtest (game, time, teacher, players)
-		        VALUES ('a', '$time', '$teacher','$players')";
+		        $sql = "INSERT INTO plannedgames (game, time, teacher, players)
+		        VALUES ('$name', '$time', '$teacher','$players')";
 		        // use exec() because no results are returned
 		        $conn->exec($sql);
-		        echo '<script>console.log("connection successfully");</script>';
+		        echo '<script>console.log("created successfully");</script>';
+		        echo "<script type='text/javascript'>alert('successfully created');</script>";
 		        }
 		    catch(PDOException $e)
 		        {

@@ -42,11 +42,14 @@
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="game"><p>Welk spel wilt u gaan spelen?</p></label>
 		    	<div class="col-sm-10">
-		        	<input name='game' type="button" id='urlbutton game' onclick='loadURL()' class="form-control input">
+		    		<?php
+				    	$name = $_GET['name'];
+				    ?>
+		        	<input name='game' type="button" id='urlbutton game' onclick='loadURL()' class="form-control input" value='<?php echo $name; ?>'>
 		     	</div>
 		    </div>
 		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="time"><p>tijdvak:</p></label>
+		    	<label class="control-label col-sm-2" for="time"><p>begintijd:</p></label>
 		    	<div class="col-sm-10">
 		        	<input name='time' type="time" class="form-control input" id="time" min="9:00" max="16:00" value='<?php echo $time; ?>' required>
 		     	</div>
