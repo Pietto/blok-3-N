@@ -55,8 +55,8 @@
 		    	.'<p><b>Geplande begintijd: </b>'.$data['time'].'</p>'
 		    	.'<p><b>Lengte spel: </b>'.'0</p>'
 		    	.'<p><b>uitlegger: </b>'.$data['teacher'].'</p>'
-		    	.'<a href="database/update.php?name='.$data["game"].'&time='.$data["time"].'&teacher='.$data["teacher"].'&players='.$data["players"]."&id=".$data["id"].'" class="btn btn-primary">'.'update'.'</a>'
-		    	.'<button class="btn btn-primary btn-delete">delete</button>'
+		    	.'<a href="database/update.php?name='.$data["game"].'&time='.$data["time"].'&teacher='.$data["teacher"].'&players='.$data["players"]."&id=".$data["id"].'" class="btn btn-primary btn-update">'.'update'.'</a>'
+		    	.'<a href="database/delete.php?name='.$data["game"].'&time='.$data["time"]."&id=".$data["id"].'" class="btn btn-primary btn-delete">'.'delete'.'</a>'
 		    	."</div>";
 		?>
 	</div>
@@ -72,5 +72,22 @@
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>
 	</div>
+	<?php
+	   	$name = $_GET['name'];
+	   	$time = $_GET['time'];
+	   	$teacher = $_GET['teacher'];
+	   	$players = $_GET['players'];
+	   	$id = $_GET['id'];
+	?>
+	<script type="text/javascript">
+		function loadURL(){
+			var name = '<?php echo $name ;?>';
+			var time = '<?php echo $time ;?>';
+			var teacher = '<?php echo $teacher ;?>';
+			var players = '<?php echo $players ;?>';
+			var id = '<?php echo $id ;?>';
+			window.open("database/delete.php?name="+name+"&time="+time+"&teacher="+teacher+"&players="+players+"&id="+id, "_self");
+		}
+	</script>
 </body>
 </html>

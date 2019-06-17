@@ -188,7 +188,7 @@ input:hover{
 	float: right;
 	background-color: red;
 }
-.btn-delete:hover{
+.btn-delete:hover,#nobtn:hover{
 	background-color: rgba(200,0,0,1);
 }
 .card:hover{
@@ -203,3 +203,20 @@ input:hover{
 		width: 80vw;
 	}
 }*/
+#yesbtn{
+	width: 30vw;
+	height: auto;
+	font-size: 3vw;
+}
+#nobtn{
+	background-color: red;
+	width: 30vw;
+	height: auto;
+	font-size: 3vw;
+	margin: 25px;
+}
+#confirmbtns{
+	width: 100%;
+	align-content: center;
+	text-align: center;
+}
