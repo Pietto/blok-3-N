@@ -133,9 +133,6 @@ input{
 .active{
 	background-color: rgba(34,34,34,.5) !important;
 }
-@media only screen and (max-width: 768px) {
-	
-}
 /*
 #0b3c5d	--prussian blue
 #328cc1	--sky blue
@@ -181,3 +178,12 @@ input:hover{
 	box-shadow: 0px 0px 50px 5px rgba(255, 206, 0, 1);
 	transition: 1s;
 }
+
+
+
+/*
+@media only screen and (max-width: 768px) {
+	.card{
+		width: 80vw;
+	}
+}*/

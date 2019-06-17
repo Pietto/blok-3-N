@@ -56,9 +56,8 @@
 		            .'<div class="card-body">'
 		            .'<h1 class="card-title">'.$data['name'].'</h5>'
 		            .'<br>'
-		            .'<h5 class="card-title">Aantal spelers</h5>'
-		            .'<p>'.$data["min_players"].' - '.$data["max_players"].'</p>'
-		            .'<h5 class="card-title">Beschrijving</h5>'
+		            .'<p class="card-title"><b>Aantal spelers: </b>'.$data["min_players"].' - '.$data["max_players"].'</p>'
+		            .'<p class="card-title"><b>Beschrijving:</b></p>'
 		            .$data["description"]
 		            .'<a target="_blank" href="'.$data["url"].'">Meer informatie</a></br></br>'
 		            .$data["youtube"].'<br><br>'

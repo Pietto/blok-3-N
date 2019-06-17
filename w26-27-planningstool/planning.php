@@ -52,7 +52,8 @@
 
 		    while ($data = $stmt->fetch())
 		        echo "<div class='card'>"
-		    	.$data['game']
+		    	.'<h1 id="gamename">'.$data['game'].'</h1>'
+		    	.'<img alt="alt" src="../afbeeldingen/7_wonders.jpg">'
 		    	."</div>";
 		?>
 	</div>

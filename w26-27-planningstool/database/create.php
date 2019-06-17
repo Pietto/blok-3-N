@@ -54,8 +54,8 @@
 		        VALUES ('$name', '$time', '$teacher','$players')";
 		        // use exec() because no results are returned
 		        $conn->exec($sql);
-		        echo '<script>console.log("created successfully");</script>';
-		        echo "<script type='text/javascript'>alert('successfully created');</script>";
+		        echo '<script>console.log("spel '.$name.' succesvol gecreëert");</script>';
+		        echo "<script type='text/javascript'>alert('spel \ succesvol gecreëert');</script>";
 		        }
 		    catch(PDOException $e)
 		        {
