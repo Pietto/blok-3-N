@@ -54,7 +54,7 @@
 		     	</div>
 		    </div>
 		    <div class="form-group">
-		    	<label class="control-label col-sm-2" for="teacher"><p>leraar:</p></label>
+		    	<label class="control-label col-sm-2" for="teacher"><p>Uitlegger:</p></label>
 		    	<div class="col-sm-10">
 		        	<input name='teacher' type="text" class="form-control input" id="teacher"  placeholder="Wie gaat het spel uitleggen?" value='<?php echo $teacher; ?>' required>
 		     	</div>
@@ -68,12 +68,11 @@
 		    <div class="form-group">
 		    	<label class="control-label col-sm-2" for="usr"></label>
 		    	<div class="col-sm-10">
-		        	<input type="submit" id='noidyet' class="form-control input" id="usr">
+		        	<input type="submit" id='noidyet usr'>
 		     	</div>
 		    </div>
 		</form>
 	</div>
-
 
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>

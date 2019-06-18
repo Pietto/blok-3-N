@@ -52,8 +52,8 @@
 		    while ($data = $stmt->fetch())
 		        echo "<div class='card'>"
 		    	.'<h1 id="gamename">'.$data['game'].'</h1>'
-		    	.'<p><b>Geplande begintijd: </b>'.$data['time'].'</p>'
-		    	.'<p><b>Lengte spel: </b>'.'0</p>'
+		    	.'<p><b>geplande begintijd: </b>'.$data['time'].'</p>'
+		    	.'<p><b>spelers: </b>'.$data['players'].'</p>'
 		    	.'<p><b>uitlegger: </b>'.$data['teacher'].'</p>'
 		    	.'<a href="database/update.php?name='.$data["game"].'&time='.$data["time"].'&teacher='.$data["teacher"].'&players='.$data["players"]."&id=".$data["id"].'" class="btn btn-primary btn-update">'.'update'.'</a>'
 		    	.'<a href="database/delete.php?name='.$data["game"].'&time='.$data["time"]."&id=".$data["id"].'" class="btn btn-primary btn-delete">'.'delete'.'</a>'

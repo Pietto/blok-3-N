@@ -15,9 +15,11 @@
 	        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 	        // set the PDO error mode to exception
 	        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	        $sql = "DELETE FROM plannedgames WHERE id = 31;";
+	        $sql = "DELETE FROM plannedgames WHERE id = $id;";
 	        $conn->exec($sql);
 	        echo '<script>console.log("spel '.$name.' succesvol verwijderd");</script>';
+	        echo '<script>alert("spel '.$name.' succesvol verwijderd");</script>';
+	        
 	        }
 	    catch(PDOException $e)
 	        {

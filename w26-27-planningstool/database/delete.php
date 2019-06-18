@@ -40,12 +40,13 @@
 		<h1>Weet u zeker dat u '<?php echo $name; ?>' geplant om <?php echo $time; ?> wilt verwijderen?</h1>
 		<div id='confirmbtns'>
 			<button onclick="window.location.href='../planning.php'" id='yesbtn' class='btn btn-primary'>Nee, ga terug</button>
-			<form method='POST'>
+			<form id='form' method='POST'>
 				<button id='nobtn' class='btn btn-primary'>Ja, verwijder</button>
 			</form>
 		</div>
 	</div>
 
+	<?php include 'execute-delete.php';?>
 	<div id='footer'>
 		<h1>Pieterjan van Dijk &copy;<?php echo date("Y"); ?>.</h1>
 	</div>

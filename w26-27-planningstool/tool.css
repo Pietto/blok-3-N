@@ -133,12 +133,6 @@ input{
 .active{
 	background-color: rgba(34,34,34,.5) !important;
 }
-/*
-#0b3c5d	--prussian blue
-#328cc1	--sky blue
-#ffce00	--gold leaf
-#1d2731	--ivory black
-*/
 .testdivs{
 	background-color: white;
 	transition: .35s;
@@ -194,9 +188,9 @@ input:hover{
 .card:hover{
 	box-shadow: 0 0 150px 20px black;
 }
-
-
-
+.navbar-brand {
+	cursor: default;
+}
 /*
 @media only screen and (max-width: 768px) {
 	.card{
@@ -204,19 +198,28 @@ input:hover{
 	}
 }*/
 #yesbtn{
-	width: 30vw;
+	width: 7.5vw;
 	height: auto;
-	font-size: 3vw;
+	font-size: 1vw;
 }
 #nobtn{
 	background-color: red;
-	width: 30vw;
+	width: 7.5vw;
 	height: auto;
-	font-size: 3vw;
+	font-size: 1vw;
 	margin: 25px;
+}
+#nobtn,#form{
+	display: inline-block;
 }
 #confirmbtns{
 	width: 100%;
 	align-content: center;
 	text-align: center;
 }
+/*
+#0b3c5d	--prussian blue
+#328cc1	--sky blue
+#ffce00	--gold leaf
+#1d2731	--ivory black
+*/

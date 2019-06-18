@@ -1,0 +1,225 @@
+body{
+	margin: 2.5%;
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 125%;
+}
+#top{
+	background-image: linear-gradient(rgba(255, 206, 0, 0.75), rgba(255, 221, 81, 0.75));
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 20px;
+	border: 1px solid #1d2731;
+	box-shadow: 5px 10px 20px 10px #888888;
+}
+#header h1,#header h2{
+	text-align: center;
+	position: relative;
+	top: 10%;
+}
+#header h2{
+	font-family: Yu Gothic UI Light, Calibri;
+	letter-spacing: 10px;
+}
+#header h1{
+	font-family: Verdana Pro SemiBold, arial black;
+}
+#header{
+	background-image: radial-gradient(rgba(255, 206, 0, 0.75), rgba(255, 221, 81, 0.75));
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 15px;
+	height: 125px;
+}
+.navbar{
+	width: 100%;
+	margin: 0 auto;
+	border-radius: 15px;
+	border: 1px solid #1d2731;
+}
+.navbar-brand{
+	margin: 0;
+}
+.btn{
+	background-color: #ffce00;
+	border: 1px solid black;
+	border-radius: 10px;
+	transition: 0.25s;
+}
+.btn a{
+	text-decoration: none;
+	color: black;
+}
+.btn:hover{
+	background-color: #ffdc49;
+	border: 1px solid black;
+	border-radius: 10px;
+	transition: 0.25s;
+}
+#content,#contentHome{
+	background-image: radial-gradient(rgba(11, 60, 93, 0.75), rgba(0, 0, 0, 0.75));
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 30px;
+	border-radius: 15px;
+	height: auto;
+	border: 1px solid black;
+	box-shadow: 5px 10px 20px 10px #888888;
+	padding: 15%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#contentHome{
+	padding-left: 30%;
+	padding-right: 30%;
+	height: auto;
+}
+#content h1,#contentHome h1{
+	color: black;
+	text-align: center;
+	font-family: Verdana Pro SemiBold, arial black;
+}
+#contentHome p{
+	color: black;
+	text-align: left;
+	font-family: Yu Gothic UI Light, Calibri;
+	font-size: 20px;
+	font-weight: bold;
+}
+#footer{
+	background-color: rgba(34, 34, 34, 1); 
+	color: black;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+	border: 1px solid black;
+	margin: 0 auto;
+	height: -10%;
+	box-shadow: 0px 0px 20px 10px #888888;
+}
+#footer h1{
+	font-size: 20px;
+	font-family: Yu Gothic UI Light, Calibri;
+	font-weight: bolder;
+	letter-spacing: 2.5px;
+	color: rgb(157, 157, 157);
+	position: relative;
+	bottom: 5px;
+}
+input{
+	width: 25vw !important;
+	text-align: center;
+}
+.content a{
+	color: rgba(0,0,0,1) !important;
+}
+#expandbtn{
+	position: relative !important;
+	left: 10px;
+}
+#showplanner,#showplanning{
+	list-style-type: none;
+	text-decoration: none;
+	color: rgb(0,0,0,1);
+	transition-duration: .75s;
+}
+#showplanner:hover,#showplanning:hover{
+	color: rgb(255,255,255,1);
+	transition-duration: .25s;
+}
+.active{
+	background-color: rgba(34,34,34,.5) !important;
+}
+.testdivs{
+	background-color: white;
+	transition: .35s;
+}
+.testdivs:hover{
+	background-color: pink;
+	cursor: pointer;
+}
+.content{
+	align-content: center;
+	text-align: center;
+}
+.card{
+	background-color: white;
+	width: 20vw;
+	display: inline-block;
+	margin: .5vw;
+	padding: .5vw;
+	vertical-align: top;
+	transition: .5s;
+	border-radius: 15px;
+}
+.card img,.card iframe{
+	width: 100%;
+	height: auto;
+}
+.card p{
+	font-family: bahnschrift light;
+	font-size: 1vw;
+}
+.card h1{
+	font-family: verdana;
+	font-size: 2.2vw;
+	width: 20vw;
+}
+label{
+	color: white;
+}
+input:hover{
+	box-shadow: 0px 0px 50px 5px rgba(255, 206, 0, 1);
+	transition: 1s;
+}
+.btn-update{
+	float: left;
+}
+.btn-delete{
+	float: right;
+	background-color: red;
+}
+.btn-delete:hover,#nobtn:hover{
+	background-color: rgba(200,0,0,1);
+}
+.card:hover{
+	box-shadow: 0 0 150px 20px black;
+}
+.navbar-brand {
+	cursor: default;
+}
+/*
+@media only screen and (max-width: 768px) {
+	.card{
+		width: 80vw;
+	}
+}*/
+#yesbtn{
+	width: 7.5vw;
+	height: auto;
+	font-size: 1vw;
+}
+#nobtn{
+	background-color: red;
+	width: 7.5vw;
+	height: auto;
+	font-size: 1vw;
+	margin: 25px;
+}
+#nobtn,#form{
+	display: inline-block;
+}
+#confirmbtns{
+	width: 100%;
+	align-content: center;
+	text-align: center;
+}
+/*
+#0b3c5d	--prussian blue
+#328cc1	--sky blue
+#ffce00	--gold leaf
+#1d2731	--ivory black
+*/
